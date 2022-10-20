@@ -1,10 +1,13 @@
 package com.example.cvapp
 
+import android.content.Context
+import android.content.SharedPreferences
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -17,16 +20,11 @@ private const val ARG_PARAM2 = "param2"
  * create an instance of this fragment.
  */
 class WorkFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
-
+    lateinit var spf: SharedPreferences
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
+        spf = requireActivity().getSharedPreferences("cv", Context.MODE_PRIVATE)
+
     }
 
     override fun onCreateView(
@@ -34,7 +32,30 @@ class WorkFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_work, container, false)
+        var view: View = inflater.inflate(R.layout.fragment_work, container, false)
+
+        (view.findViewById<TextView>(R.id.work_experience_one_company))!!.text = spf.getString("work_experience_one_company","")
+        (view.findViewById<TextView>(R.id.work_experience_one_title))!!.text = spf.getString("work_experience_one_title","")
+        (view.findViewById<TextView>(R.id.work_experience_one_date_range))!!.text = spf.getString("work_experience_one_date_range","")
+        (view.findViewById<TextView>(R.id.work_experience_one_city_state))!!.text = spf.getString("work_experience_one_city_state","")
+
+        (view.findViewById<TextView>(R.id.work_experience_two_company))!!.text = spf.getString("work_experience_two_company","")
+        (view.findViewById<TextView>(R.id.work_experience_two_title))!!.text = spf.getString("work_experience_two_title","")
+        (view.findViewById<TextView>(R.id.work_experience_two_date_range))!!.text = spf.getString("work_experience_two_date_range","")
+        (view.findViewById<TextView>(R.id.work_experience_two_city_state))!!.text = spf.getString("work_experience_two_city_state","")
+
+        (view.findViewById<TextView>(R.id.work_experience_three_company))!!.text = spf.getString("work_experience_three_company","")
+        (view.findViewById<TextView>(R.id.work_experience_three_title))!!.text = spf.getString("work_experience_three_title","")
+        (view.findViewById<TextView>(R.id.work_experience_three_date_range))!!.text = spf.getString("work_experience_three_date_range","")
+        (view.findViewById<TextView>(R.id.work_experience_three_city_state))!!.text = spf.getString("work_experience_three_city_state","")
+
+        (view.findViewById<TextView>(R.id.work_experience_four_company))!!.text = spf.getString("work_experience_four_company","")
+        (view.findViewById<TextView>(R.id.work_experience_four_title))!!.text = spf.getString("work_experience_four_title","")
+        (view.findViewById<TextView>(R.id.work_experience_four_date_range))!!.text = spf.getString("work_experience_four_date_range","")
+        (view.findViewById<TextView>(R.id.work_experience_four_city_state))!!.text = spf.getString("work_experience_four_city_state","")
+
+
+        return view
     }
 
     companion object {

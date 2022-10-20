@@ -22,15 +22,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="About Me"
-                android:id="@+id/about"
+                android:id="@+id/about_me"
                 android:textSize="16sp"
-                />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Motivated software developer with over 5 years+ experience of hands-on, professional experience in the full-stack design and development of software solutions, using all phases of the Software Development Life-Cycle. Skills cover a variety of languages and technologies such as Java, Angular 2+, Spring Framework, Oracle PL/SQL. Have MS and BS in Computer Science."
-                android:id="@+id/about_details"
-                android:textSize="12sp"
                 />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
@@ -67,7 +60,7 @@
                 <ImageView
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    tools:src="@drawable/miu"
+                    android:src="@drawable/miu"
                     />
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -76,13 +69,15 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Maharishi International University"
+                        android:text=""
+                        android:id="@+id/education_one_name"
                         android:textSize="16sp"
                         />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Master of Science in Computer Science"
+                        android:text=""
+                        android:id="@+id/education_one_program"
                         android:textSize="12sp"
                         />
                 </LinearLayout>
@@ -96,7 +91,7 @@
                 <ImageView
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    tools:src="@drawable/mit"
+                    android:src="@drawable/cbu"
                     />
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -105,13 +100,15 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Massachusetts Institute of Technology"
+                        android:text=""
+                        android:id="@+id/education_two_name"
                         android:textSize="16sp"
                         />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Bachelor of Science in Computer Science"
+                        android:text=""
+                        android:id="@+id/education_two_program"
                         android:textSize="12sp"
                         />
                 </LinearLayout>
@@ -147,12 +144,13 @@
                 <ImageView
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    tools:src="@drawable/oracle"
+                    android:src="@drawable/ms"
                     />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="OCA Java SE 8 Programmer"
+                    android:text=""
+                    android:id="@+id/certification_one_name"
                     android:textSize="16sp"
                     />
 
@@ -165,13 +163,14 @@
                 <ImageView
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    tools:src="@drawable/mcsd"
+                    android:src="@drawable/ms"
                     />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Microsoft Certified Fundamentals 2021"
+                    android:text=""
+                    android:id="@+id/certification_two_name"
                     android:textSize="16sp"
                     />
 

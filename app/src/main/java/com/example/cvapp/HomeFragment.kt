@@ -1,10 +1,16 @@
 package com.example.cvapp
 
+import android.content.Context
+import android.content.SharedPreferences
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
+import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
+
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -17,16 +23,11 @@ private const val ARG_PARAM2 = "param2"
  * create an instance of this fragment.
  */
 class HomeFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
-
+    lateinit var spf: SharedPreferences
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
+        spf = requireActivity().getSharedPreferences("cv", Context.MODE_PRIVATE)
+
     }
 
     override fun onCreateView(
@@ -34,7 +35,18 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false)
+        var view: View = inflater.inflate(R.layout.fragment_home, container, false)
+
+        (view.findViewById<TextView>(R.id.fullname))!!.text = spf.getString("name","")
+        (view.findViewById<TextView>(R.id.title))!!.text = spf.getString("title","")
+        (view.findViewById<TextView>(R.id.career_note))!!.text = spf.getString("career_note","")
+        (view.findViewById<TextView>(R.id.note_details))!!.text = spf.getString("languages","")
+        (view.findViewById<TextView>(R.id.web))!!.text = spf.getString("web","")
+        (view.findViewById<TextView>(R.id.servers))!!.text = spf.getString("servers","")
+        (view.findViewById<TextView>(R.id.frameworks))!!.text = spf.getString("frameworks","")
+        (view.findViewById<TextView>(R.id.databases))!!.text = spf.getString("databases","")
+
+        return view
     }
 
     companion object {

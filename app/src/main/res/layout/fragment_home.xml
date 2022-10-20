@@ -9,25 +9,25 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="16dp"
-        tools:src="@drawable/display_pic"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:src="@drawable/dp"
         />
 
         <TextView
-            android:id="@+id/name"
+            android:id="@+id/fullname"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Mickey Mouse"
+            android:text=""
             android:layout_marginLeft="200dp"
             android:textSize="20sp"
-            android:layout_marginBottom="10dp"
             android:textStyle="bold" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="200dp"
-            android:text="Software Engineer"
+            android:text=""
             android:id="@+id/title"
             android:textSize="16sp"
             />
@@ -36,7 +36,8 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
         >
         <LinearLayout
             android:layout_width="match_parent"
@@ -46,14 +47,14 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Career Note"
-                android:id="@+id/note"
+                android:text=""
+                android:id="@+id/career_note"
                 android:textSize="16sp"
                 />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Completed on-campus studies and currently taking distance education courses to complete a Master's degree in Computer Science (Available for full-time W2 employment)."
+                android:text=""
                 android:id="@+id/note_details"
                 android:textSize="12sp"
                 />
@@ -64,7 +65,8 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
         >
         <LinearLayout
             android:layout_width="match_parent"
@@ -81,24 +83,53 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Completed on-campus studies and currently taking distance education courses to complete a Master's degree in Computer Science (Available for full-time W2 employment)."
-                android:id="@+id/experience_details"
+                android:text=""
+                android:id="@+id/languages"
                 android:textSize="12sp"
                 />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/web"
+                android:textSize="12sp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/servers"
+                android:textSize="12sp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/frameworks"
+                android:textSize="12sp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/databases"
+                android:textSize="12sp"
+                />
+
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
     <Space
         android:layout_width="match_parent"
-        android:layout_height="30dp"/>
+        android:layout_height="10dp"/>
 
-    <Button
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginLeft="320dp"
+    <!--<Button
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="280dp"
         android:text="+"
         android:textStyle="bold"
-        android:background="@drawable/rounded_button"/>
+        android:background="@drawable/rounded_button"/>-->
 
 
 </LinearLayout>
